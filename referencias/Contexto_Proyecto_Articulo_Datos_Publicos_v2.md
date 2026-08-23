@@ -826,3 +826,47 @@ celdas "Lectura del equipo" del notebook con las interpretaciones del equipo.
 4. Publicación Medium/Hashnode (puede reutilizar el artículo técnico).
 5. Fase 7 opcional: Grafana (login: probar admin/admin; si se olvidó la contraseña,
    resetear con `grafana-cli admin reset-admin-password <nueva>`).
+
+---
+
+## 24. Cierre de sesión — domingo 23 de agosto de 2026 (resumen para revisión del alumno)
+
+Todo lo de esta sesión quedó guardado y publicado en GitHub (commits `9a585bd` → `ad60d79`).
+
+### Qué se completó hoy
+
+1. **Repo remoto configurado** — creado manualmente por el alumno y conectado; rama `master`
+   renombrada a `main`; todo sincronizado con `git push`.
+   https://github.com/Elias-Manuel-Marquez-Bailon/proyecto-articulo-datos-publicos
+2. **README completo** — grupo 9°A IDGS agregado; resultados principales actualizados hasta
+   Fase 6; instrucciones corregidas (ITER ~35 MB + IMM_2020.xls).
+3. **Fase 5 ✅** — árbol de decisión explicativo (Partes 19–20): precisión 0.952,
+   regla principal `p_cel <= 0.86`, importancias p_cel/p_inter/p_drenaj;
+   `grafica_8.png` y `grafica_9.png`.
+4. **Fase 6 ✅** — validación externa CONAPO (Partes 21–23): descarga oficial de
+   `IMM_2020.xls`, cruce por `15000 + MUN` verificado con población idéntica al 100%,
+   gradiente compatible (alto = 100% Muy bajo; bajo = Alto/Medio sin excepciones),
+   `grafica_10.png` y `outputs/cruce_conapo_perfiles.csv`. Requirió `xlrd` en requirements.
+5. **Fase 8 (borradores v1)** — `articulo_tecnico.md` (1,647 palabras, estructura completa,
+   7 referencias) y `articulo_hypatia.md` (4,056 caracteres, divulgación sin citas).
+   Teléfonos de autores NO subidos al repo público (solo al Word final de la revista).
+
+### Qué debe revisar el equipo sobre los borradores
+
+- Voz y estilo: ajustar frases a su manera de escribir (los borradores son base de trabajo).
+- Confirmar "último grado académico" de cada autor para Hypatia (¿Estudiante/Pasante/TSU?).
+- Verificar que todos se sientan representados en la autoría y el orden de los nombres.
+
+### Estado global al cerrar la sesión
+
+| Fase | Estado |
+|---|---|
+| 1–4 | ✅ Completadas (sesión sábado 22) |
+| 5 Decision Tree | ✅ Completada |
+| 6 Validación CONAPO | ✅ Completada |
+| 7 Dashboard/Grafana | ⏸ Opcional; probar login admin/admin o resetear contraseña |
+| 8 Artículos | 🟡 Borradores v1 listos, falta revisión del equipo |
+| 8 PDF / Word Hypatia | ⬜ Tras aprobar textos |
+| 9 Medium/Hashnode + presentación | ⬜ Pendiente |
+
+Pendiente transversal: llenar las celdas "Lectura del equipo" del notebook antes de entregar.
