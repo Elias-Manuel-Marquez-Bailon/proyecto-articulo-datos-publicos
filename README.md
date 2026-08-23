@@ -66,4 +66,5 @@ Nota: por tamaño, el dataset crudo nacional del ITER **no** está incluido en e
 ## Enlace al artículo
 
 - Artículo técnico: [`articulo_tecnico.md`](articulo_tecnico.md)
-- Versión de divulgación (Revista Hypatia) y PDF: pendientes.
+- Versión de divulgación (Revista Hypatia): [`articulo_hypatia.md`](articulo_hypatia.md)
+- PDF: pendiente de generar una vez aprobado el texto.

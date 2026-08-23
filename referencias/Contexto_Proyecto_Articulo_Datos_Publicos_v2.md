@@ -787,3 +787,42 @@ exportados; mapa de clusters si es viable; Grafana SOLO si se implementa rápido
 Fases 1–6 completadas. Pendientes: Fase 7 (dashboard opcional), Fase 8 (artículo ~4,000
 caracteres para Hypatia + PDF), Fase 9 (Medium/Hashnode, presentación 5–7 min), y llenar las
 celdas "Lectura del equipo" del notebook con las interpretaciones del equipo.
+
+---
+
+## 23. Registro de avance — Fase 8: borradores v1 de ambos artículos (domingo 23 de agosto de 2026)
+
+### Artículo técnico (`articulo_tecnico.md`)
+
+- Borrador completo con la estructura exigida por el profesor (Resumen → Referencias).
+- **1,647 palabras** sin contar URLs ni referencias (meta 1200–1800 ✅).
+- Todos los números tomados de los resultados reales del notebook/outputs:
+  silueta k=2 vs k=3, composición 59/50/16, brecha digital 3.8%–75.7%, hallazgo del
+  denominador `VIVPARH_CV`, precisión del árbol 95.2%, regla `p_cel <= 0.86`,
+  importancias 0.54/0.20/0.19/0.06, gradiente CONAPO completo y caso Chimalhuacán.
+- Tabla resumen de perfiles incluida en Resultados.
+- 7 referencias numeradas (INEGI x3, CONAPO x2, scikit-learn x2), dentro de la meta 7–9.
+- Incluye limitaciones condensadas de la sección 13 y lectura cautelosa de la coincidencia
+  con CONAPO (mismo censo de origen; no validación circular).
+
+### Versión Hypatia (`articulo_hypatia.md`, archivo nuevo)
+
+- Borrador de divulgación conforme a REGLAS_ARTICULO_HYPATIA.md:
+  **4,056 caracteres con espacios** (meta ~4,000 ✅), inicio gancho cotidiano,
+  desarrollo y cierre; sin citas ni referencias; términos explicados entre paréntesis
+  (KMeans = ordenar frutas, árbol = lista de preguntas); subtítulos mínimos;
+  instituciones mencionadas (INEGI, CONAPO, UTEZ); fidelidad a los números reales.
+- Datos de autores: nombres + grupo 9°A + UTEZ + correos institucionales.
+- **Decisión de privacidad:** los teléfonos NO se suben al repo público; van únicamente en el
+  documento Word final que se envíe a hypatia@morelos.gob.mx (asunto = título).
+  Pendiente confirmar "último grado académico" de cada autor para la versión final.
+
+### Pendientes derivados
+
+1. Revisión y ajuste de ambos borradores por el equipo (voz propia del equipo).
+2. Generar PDF del artículo técnico (pandoc o Word) una vez aprobado.
+3. Formatear Hypatia a Word: Arial 11, subtítulos Arial 12 negritas, interlineado sencillo,
+   agregar teléfonos, nombre de archivo con palabras clave del tema.
+4. Publicación Medium/Hashnode (puede reutilizar el artículo técnico).
+5. Fase 7 opcional: Grafana (login: probar admin/admin; si se olvidó la contraseña,
+   resetear con `grafana-cli admin reset-admin-password <nueva>`).
