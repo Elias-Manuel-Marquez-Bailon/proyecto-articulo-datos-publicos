@@ -697,3 +697,49 @@ obtener reglas legibles y variables que separan los grupos. Después Fase 6 (val
 3. **Encender/iniciar el servicio de Grafana** antes de la Fase 7 (dashboard); no dejarlo
    para el último momento.
 4. Publicación Medium/Hashnode y PDF del artículo siguen pendientes (Fases 8–9).
+
+---
+
+## 21. Registro de avance — sesión domingo 23 de agosto de 2026
+
+### Repositorio remoto configurado ✅
+
+- Repo **público** creado manualmente por el alumno y conectado:
+  https://github.com/Elias-Manuel-Marquez-Bailon/proyecto-articulo-datos-publicos
+- Rama local renombrada `master` → `main` (queda trackeando `origin/main`; pushes simples con `git push`).
+- Push inicial: 5 commits locales + 1 nuevo.
+- README actualizado: grupo **9°A — IDGS (Ingeniería en Desarrollo y Gestión de Software)**,
+  resultados principales de Fase 4, e instrucciones corregidas (ITER ~35 MB, extraer ZIP en
+  `data/raw/`, queda `data/raw/iter_00_cpv2020/`; se corrigió el dato viejo de "varios GB").
+
+### Fase 5 — Decision Tree explicativo: ✅ COMPLETADA
+
+- Notebook Partes 19–20 agregadas (52 celdas totales), ejecutado completo de arriba a abajo
+  con nbconvert usando Anaconda (`C:\Users\corey\anaconda3\python.exe -m nbconvert --execute`).
+- `DecisionTreeClassifier(max_depth=3, min_samples_leaf=5, random_state=42)` sobre las mismas
+  8 variables, objetivo = `perfil`. Sin train/test a propósito: fin interpretativo, no predictivo
+  (justificado en el markdown de la Parte 19).
+- Precisión reproduciendo los clusters: **0.952** (bajo 16/16, intermedio 48/50, alto 55/59).
+  Se documenta que la coincidencia alta es esperable (mismas variables que KMeans):
+  el árbol interpreta, NO valida; la validación externa es la Fase 6 con CONAPO.
+- Regla principal del árbol: `p_cel <= 0.86` separa bajo/intermedio vs alto; dentro del ramal
+  bajo, `p_inter <= 0.19` aísla el estrato bajo (con `p_drenaj <= 0.89` como refino).
+- Importancias: p_cel 0.54, p_inter 0.20, p_drenaj 0.19, p_c_elec 0.06; el resto en 0.
+- Gráficas nuevas: `imagenes/grafica_8.png` (diagrama del árbol) y `imagenes/grafica_9.png`
+  (importancia de variables).
+- Import ampliado en Parte 1: `from sklearn.tree import DecisionTreeClassifier, export_text, plot_tree`.
+
+### Siguiente fase
+
+**Fase 6 — Validación externa con CONAPO:** descargar marginación municipal 2020,
+cruzar por clave de municipio (clave INEGI `MUN` vs clave CONAPO), analizar la distribución
+de grados de marginación por cluster. Sin lenguaje causal; presentar como comparación.
+
+### Recordatorios vigentes
+
+1. ~~Crear repo remoto~~ ✅ hecho (sección 21). 
+2. ~~Grupo en README~~ ✅ puesto (9°A — IDGS).
+3. **Grafana:** encender/iniciar el servicio antes de la Fase 7; no dejarlo al final.
+4. Publicación Medium/Hashnode y PDF del artículo (Fases 8–9) siguen pendientes.
+5. Celdas "Lectura del equipo" del notebook siguen como prompts para redactar por el equipo
+   (Partes 9, 10, 11, 13, 17, 18, 19 y 20); conviene llenarlas antes de la entrega.
