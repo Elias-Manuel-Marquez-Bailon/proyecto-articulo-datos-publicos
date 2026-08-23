@@ -9,7 +9,7 @@ Proyecto final de la materia **Extracción de Conocimiento en Bases de Datos**: 
 - Chavez Martinez Adrian Uxue
 - Marquez Bailon Elias Manuel
 
-**Grupo:** (pendiente)
+**Grupo:** 9°A — IDGS (Ingeniería en Desarrollo y Gestión de Software)
 
 ## Pregunta guía
 
@@ -37,7 +37,12 @@ Variables consideradas (proporciones respecto a viviendas particulares habitadas
 
 ## Resultados principales
 
-(Pendiente: se completan al terminar las Fases 4–6.)
+- KMeans con **k = 3** (`random_state=42`, `n_init=10`), elegido con método del codo y coeficiente de silueta (silueta = 0.27).
+- Tres perfiles municipales por conectividad y servicios: **alto** (59 municipios), **intermedio** (50) y **bajo** (16).
+- Brecha digital marcada en internet: de 3.8% de viviendas conectadas en el municipio menos conectado a 75.7% en el más conectado.
+- El clustering refleja condiciones de vivienda/servicios, no tamaño poblacional.
+
+*Se actualizará al completar las Fases 5–6 (árbol explicativo y validación CONAPO).*
 
 ## Limitaciones
 
@@ -53,10 +58,10 @@ Detalle completo en el notebook y el artículo.
 
 1. Instalar Python 3.11+ o Anaconda.
 2. Instalar dependencias: `pip install -r requirements.txt`
-3. Descargar el ITER 2020 (ver `referencias/fuentes_datos.txt`) y colocar `dataset_original.csv` en `data/raw/`.
+3. Descargar el ITER 2020 (~35 MB) desde `referencias/fuentes_datos.txt` y extraer el ZIP en `data/raw/` (debe quedar la carpeta `data/raw/iter_00_cpv2020/`).
 4. Abrir y ejecutar `notebook/analisis_datos_publicos.ipynb` (debe quedar ejecutado en orden).
 
-Nota: el archivo crudo nacional del ITER pesa varios GB y **no** está incluido en el repositorio; solo se incluye `data/processed/dataset_limpio.csv`.
+Nota: por tamaño, el dataset crudo nacional del ITER **no** está incluido en el repositorio; solo se incluye `data/processed/dataset_limpio.csv` (125 municipios).
 
 ## Enlace al artículo
 
