@@ -624,3 +624,76 @@ Plan aprobado por el equipo y en ejecución. Fecha de registro: sábado 22 de ag
 - El CSV completo nacional del ITER pesa varios GB y GitHub no acepta archivos mayores a 100 MB.
 - No se subirá el raw nacional al repo: queda local en `data/raw/` con instrucciones de descarga en el README.
 - Solo se sube `dataset_limpio.csv` (125 filas).
+
+---
+
+## 20. Registro de avance — cierre de sesión sábado 22 de agosto de 2026
+
+Estado real del proyecto al finalizar la sesión. Las fases 2, 3 y 4 están **COMPLETADAS**.
+
+### Fase 1 — Investigación: ✅ COMPLETADA
+
+Sin cambios respecto a lo descrito arriba.
+
+### Fase 2 — Repositorio y preparación de datos: ✅ COMPLETADA
+
+- Integrantes oficiales registrados en README: Gonzaga Castañeda Cristian Amauri,
+  Portilla Palestina Viridiana, Chavez Martinez Adrian Uxue, Marquez Bailon Elias Manuel.
+- **Corrección importante:** la URL original del ITER (`iter_2020_csv.zip`) ya no existe.
+  La vigente es: https://www.inegi.org.mx/contenidos/programas/ccpv/2020/datosabiertos/iter/iter_00_cpv2020_csv.zip
+  (~35 MB comprimidos; ~143 MB el CSV nacional extraído, NO "varios GB").
+- Dataset descargado y extraído en `data/raw/iter_00_cpv2020/`.
+- Notebook Partes 1–8 ejecutadas sin errores. Encoding correcto: **utf-8-sig** (el CSV trae BOM).
+- Filtro municipal verificado con `assert`: `LOC=="0000"` + `ENTIDAD=="15"` excluyendo `MUN=="000"`
+  → exactamente **125 municipios**.
+- **Hallazgo metodológico clave:** los conteos `VPH_*` deben dividirse entre `VIVPARH_CV`
+  ("viviendas particulares habitadas con características"), NO entre `VIVPAR_HAB`.
+  Dividir entre `VIVPAR_HAB` produce proporciones > 1 (hasta 1.17). Documentado en Parte 6 del notebook.
+- Variables aprobadas por el equipo (dataset limpio): proporciones `p_aguadv`, `p_drenaj`, `p_c_elec`,
+  `p_inter`, `p_pc`, `p_cel`, `p_autom` + directas `GRAPROES`, `PROM_OCUP`;
+  descriptivas fuera del modelo: `POBTOT`, `TVIVHAB`, `VIVPAR_HAB`, `VIVPARH_CV`, claves/nombres.
+- `data/processed/dataset_limpio.csv`: 125 filas × 22 columnas, cero nulos, proporciones en [0, 1].
+- `git init` + commit inicial `2bae1ca`.
+
+### Fase 3 — Análisis exploratorio: ✅ COMPLETADA
+
+- Notebook Partes 9–13: estadística descriptiva, distribuciones, municipios extremos,
+  escolaridad vs conectividad, matriz de correlaciones.
+- Gráficas generadas: `imagenes/grafica_1..5.png` (requisito mínimo de 2 superado).
+- Hallazgos: brecha digital extrema en internet (3.8% Ixtapan del Oro → 75.7% Coacalco);
+  gradiente educativo paralelo (6.5 vs 12.3 años);
+  multicolinealidad alta: `p_inter`~`p_pc` r=0.97, `GRAPROES`~`p_pc` r=0.95, `GRAPROES`~`p_inter` r=0.94.
+- Decisión del equipo: **quitar `p_pc` del clustering** (duplicada con `p_inter`);
+  `GRAPROES` y `p_inter` se conservan por medir conceptos distintos.
+- Commit `deee0af`.
+
+### Fase 4 — KMeans: ✅ COMPLETADA
+
+- Notebook Partes 14–18: variables finales (8), `StandardScaler`, codo + silueta para k=2..10
+  (`grafica_6.png`), modelo final, perfiles, exportación (`grafica_7.png`).
+- Modelo final: **KMeans k=3**, `random_state=42`, `n_init=10`. Silueta = 0.2694.
+- Perfiles (renombrados por conectividad promedio): alto = 59 mun., intermedio = 50, bajo = 16.
+- **Decisión justificada de k:** la silueta favorece k=2 (0.39) pero da división casi binaria;
+  se eligió k=3 por interpretabilidad (estrato intermedio diferenciado) manteniendo cohesión aceptable.
+  Preferencia documentada en el notebook (Parte 15). Caso ilustrativo para defensa:
+  Chimalhuacán (metropolitano, ~700 mil hab.) cae en *intermedio*, demostrando que los clusters
+  reflejan condiciones y no tamaño poblacional.
+- Exportados: `outputs/resultados_modelo.csv` y `outputs/resumen_resultados.csv`.
+- Commit `6b45b76`.
+
+### Siguiente fase
+
+**Fase 5 — Decision Tree explicativo:** usar `perfil`/`cluster` como variable objetivo,
+obtener reglas legibles y variables que separan los grupos. Después Fase 6 (validación CONAPO).
+
+### Recordatorios pendientes (apuntados por el alumno)
+
+1. **Crear el repositorio remoto en GitHub**: <https://github.com/new>, nombre sugerido
+   `proyecto-articulo-datos-publicos`, vacío (sin README/.gitignore/licencia), y pasar la URL
+   para conectar con `git remote add origin <URL>` + push de los commits locales existentes.
+   El alumno indicará además cómo configurar el repo correctamente (nota: este entorno CLI
+   no puede visualizar imágenes; en Desktop sí).
+2. **Falta el grupo** en el README (integrantes ya están).
+3. **Encender/iniciar el servicio de Grafana** antes de la Fase 7 (dashboard); no dejarlo
+   para el último momento.
+4. Publicación Medium/Hashnode y PDF del artículo siguen pendientes (Fases 8–9).
