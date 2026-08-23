@@ -1,0 +1,28 @@
+Fuentes de datos y documentación del proyecto
+==============================================
+
+1) INEGI — Censo de Población y Vivienda 2020 (fuente principal)
+   Página del programa:
+   https://www.inegi.org.mx/programas/ccpv/2020/default.html
+
+2) INEGI — ITER 2020, datos abiertos (descarga directa del dataset, ~35 MB)
+   https://www.inegi.org.mx/contenidos/programas/ccpv/2020/datosabiertos/iter/iter_00_cpv2020_csv.zip
+
+3) INEGI — Ficha técnica / diccionario de datos del ITER 2020
+   https://www.inegi.org.mx/contenidos/programas/ccpv/2020/doc/fd_iter_cpv2020.pdf
+
+4) CONAPO — Índices de Marginación 2020 (validación externa)
+   https://www.gob.mx/conapo/documentos/indices-de-marginacion-2020-284372
+
+5) CONAPO — Índice de marginación por entidad federativa y municipio 2020
+   https://www.gob.mx/conapo/es/articulos/indice-de-marginacion-por-entidad-federativa-y-municipio-2020-271404
+
+6) Scikit-learn — Documentación oficial (KMeans, StandardScaler,
+   silhouette_score, DecisionTreeClassifier)
+   https://scikit-learn.org/stable/
+
+7) API del Banco de Indicadores de INEGI (fuente alternativa proporcionada por el profesor)
+   https://www.inegi.org.mx/servicios/api_indicadores.html
+
+8) Portal de datos abiertos de México (fuente alternativa proporcionada por el profesor)
+   https://www.datos.gob.mx/

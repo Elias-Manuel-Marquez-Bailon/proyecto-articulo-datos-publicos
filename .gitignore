@@ -1,0 +1,13 @@
+# Archivos pesados: datos crudos nacionales (no subir a GitHub)
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/README_raw.md
+
+# Salidas temporales
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Sistema
+Thumbs.db
+.DS_Store
