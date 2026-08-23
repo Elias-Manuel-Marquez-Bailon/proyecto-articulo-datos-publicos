@@ -743,3 +743,47 @@ de grados de marginación por cluster. Sin lenguaje causal; presentar como compa
 4. Publicación Medium/Hashnode y PDF del artículo (Fases 8–9) siguen pendientes.
 5. Celdas "Lectura del equipo" del notebook siguen como prompts para redactar por el equipo
    (Partes 9, 10, 11, 13, 17, 18, 19 y 20); conviene llenarlas antes de la entrega.
+
+---
+
+## 22. Registro de avance — Fase 6: ✅ COMPLETADA (domingo 23 de agosto de 2026)
+
+### Descarga y preparación
+
+- Base oficial CONAPO descargada de `conapo.segob.gob.mx` → `data/raw/IMM_2020.xls` (~1.6 MB,
+  NO se sube al repo por política de raw; instrucciones en `data/raw/README_raw.md`).
+- Hoja usada: `IMM_2020` (header en fila 0; la hoja "Base de marginación 2020" trae títulos).
+- Requirió `xlrd>=2.0.1` instalado en Anaconda base para leer `.xls`; agregado a `requirements.txt`.
+- Cruce por clave entera: `CVE_MUN_CONAPO == 15000 + MUN`. Control de calidad: población
+  idéntica al 100% entre ambas fuentes tras el cruce (`assert` implícito, dif. relativa máx = 0.0).
+
+### Resultados del cruce (Partes 21–23 del notebook, 60 celdas totales)
+
+- Distribución oficial estatal GM_2020: Muy bajo 73, Bajo 26, Medio 14, Alto 12, Muy alto 0.
+- **Gradiente perfectamente compatible con KMeans:**
+  - perfil *bajo* (16): 68.8% marginación Alto + 31.2% Medio; cero municipios en grados bajos.
+  - perfil *intermedio* (50): 52% Bajo + 28% Muy bajo + 18% Medio + 2% Alto.
+  - perfil *alto* (59): **100% Muy bajo**.
+- Mediana IM_2020 monótona: 52.13 (*bajo*) < 55.78 (*intermedio*) < 58.60 (*alto*).
+  OJO para defensa: en esta base, MAYOR IM_2020 = MENOR marginación (escala invertida);
+  aclararlo al presentar la mediana.
+- Cero casos discordantes extremos (ningún *alto* con marginación alta, ningún *bajo*
+  con marginación baja). Mencionar como matiz que ambas fuentes provienen del Censo 2020
+  y comparten dimensiones conceptuales, por lo que la coincidencia fuerte era esperable;
+  el valor está en el gradiente limpio y monotónico, no en "validar" circularmente.
+- Gráfica nueva: `imagenes/grafica_10.png` (barras apiladas 100% grado de marginación por perfil).
+- Export nuevo: `outputs/cruce_conapo_perfiles.csv` (MUN, NOM_MUN, perfil, IM_2020, GM_2020).
+- README actualizado: resultados principales incluyen árbol y validación CONAPO;
+  instrucciones de ejecución mencionan descargar IMM_2020.xls.
+
+### Siguiente fase
+
+**Fase 7 — Visualización / dashboard:** prioridad a gráficas ya existentes (10) y resultados
+exportados; mapa de clusters si es viable; Grafana SOLO si se implementa rápido y estable
+(recordatorio: encender el servicio con anticipación).
+
+### Estado global del proyecto
+
+Fases 1–6 completadas. Pendientes: Fase 7 (dashboard opcional), Fase 8 (artículo ~4,000
+caracteres para Hypatia + PDF), Fase 9 (Medium/Hashnode, presentación 5–7 min), y llenar las
+celdas "Lectura del equipo" del notebook con las interpretaciones del equipo.

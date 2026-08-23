@@ -41,8 +41,8 @@ Variables consideradas (proporciones respecto a viviendas particulares habitadas
 - Tres perfiles municipales por conectividad y servicios: **alto** (59 municipios), **intermedio** (50) y **bajo** (16).
 - Brecha digital marcada en internet: de 3.8% de viviendas conectadas en el municipio menos conectado a 75.7% en el más conectado.
 - El clustering refleja condiciones de vivienda/servicios, no tamaño poblacional.
-
-*Se actualizará al completar las Fases 5–6 (árbol explicativo y validación CONAPO).*
+- **Árbol explicativo:** un `DecisionTreeClassifier` de profundidad 3 reproduce el 95% de los clusters; la regla principal es `celular en la vivienda ≤ 86%`, seguida por acceso a internet.
+- **Validación externa CONAPO:** gradiente compatible — el perfil *alto* concentra 100% de municipios con marginación "Muy baja", el perfil *bajo* se reparte entre marginación "Alta" (69%) y "Media" (31%), sin casos extremos contradictorios.
 
 ## Limitaciones
 
@@ -58,7 +58,7 @@ Detalle completo en el notebook y el artículo.
 
 1. Instalar Python 3.11+ o Anaconda.
 2. Instalar dependencias: `pip install -r requirements.txt`
-3. Descargar el ITER 2020 (~35 MB) desde `referencias/fuentes_datos.txt` y extraer el ZIP en `data/raw/` (debe quedar la carpeta `data/raw/iter_00_cpv2020/`).
+3. Descargar los datos originales en `data/raw/` (ver `data/raw/README_raw.md`): el ZIP del ITER 2020 (~35 MB, extraer en `data/raw/`) y la base municipal de CONAPO `IMM_2020.xls`.
 4. Abrir y ejecutar `notebook/analisis_datos_publicos.ipynb` (debe quedar ejecutado en orden).
 
 Nota: por tamaño, el dataset crudo nacional del ITER **no** está incluido en el repositorio; solo se incluye `data/processed/dataset_limpio.csv` (125 municipios).
