@@ -870,3 +870,48 @@ Todo lo de esta sesión quedó guardado y publicado en GitHub (commits `9a585bd`
 | 9 Medium/Hashnode + presentación | ⬜ Pendiente |
 
 Pendiente transversal: llenar las celdas "Lectura del equipo" del notebook antes de entregar.
+
+---
+
+## 25. Registro — CAMBIO DE ALCANCE: Estado de México → Morelos (domingo 23 de agosto de 2026, noche)
+
+El profesor requiere que el análisis sea sobre municipios de **Morelos** (no del Estado de México).
+Se re-ejecutó todo el pipeline por partes y se subió a GitHub (`670dac6`, `66ac19e`).
+
+### Cambios técnicos
+
+- Filtro municipal: `ENTIDAD == "17"` + `LOC == "0000"` excluyendo `MUN == "000"` → **36 municipios**
+  (NO 33: el ITER 2020 incluye los municipios de reciente creación Hueyapan, Xoxocotla y Coatetelco).
+- Cruce CONAPO ajustado: `CVE_MUN = 17000 + MUN`. Población coincide al 100%.
+- Cero valores `*` en las columnas seleccionadas; proporciones todas en [0, 1].
+- KMeans se mantiene con las mismas 8 variables, `k = 3`, `random_state = 42`, `n_init = 10`.
+- Gráficas 1–10 regeneradas automáticamente; la gráfica 3 ahora muestra top/bottom 10 de Morelos.
+
+### Resultados nuevos (reemplazan a los del Edomex)
+
+- Silueta por k: k=2 → 0.247, **k=3 → 0.273**, k=5 → 0.303 (máximo). Se eligió k=3 porque k=5 produce
+  grupos de 1–2 municipios (uno sería solo Hueyapan, aislado por drenaje extremo); justificación
+  reescrita en Parte 15 del notebook.
+- Perfiles: **alto (9), intermedio (7), bajo (20)**.
+  - alto: Cuernavaca, Jiutepec, Cuautla, Temixco, etc. — internet 58.7% promedio.
+  - intermedio: Tepoztlán, Atlatlahucan, Huitzilac, Tlayacapan... — su rasgo distintivo es MENOR
+    acceso a agua entubada (79.8%) pese a buena escolaridad (9.2 años) e internet similar al bajo.
+  - bajo: incluye a Hueyapan (drenaje 52.3%, internet 22.9%, escolaridad 7.4 — caso extremo estatal).
+- Brecha digital Morelos: internet 22.9% (Hueyapan) → 73.1% (Cuernavaca); más homogéneo que Edomex.
+- Árbol: profundidad 2, precisión **97.2%**; reglas: `p_drenaj > 0.98` → alto; dentro de drenaje menor,
+  `p_aguadv <= 0.91` separa intermedio de bajo. Importancias: drenaje 0.56, agua 0.44; conectividad en 0.
+- **Hallazgo clave:** en Morelos el eje que separa grupos es la INFRAESTRUCTURA HIDRÁULICA + conectividad,
+  no conectividad sola como en Edomex.
+- CONAPO 2020 Morelos: sin municipios de marginación Alta/Muy alta (12 Muy baja, 19 Baja, 5 Media).
+  Perfil alto = 100% Muy baja. Bajo = 15% Muy baja / 70% Baja / 15% Medio (16 de sus 20 municipios caen
+  en grados bajos oficiales → coincidencia PARCIAL). Medianas IM_2020: bajo 55.74 ≈ intermedio 55.39,
+  alto 57.96 → gradiente NO monotónico entre bajo e intermedio; presentar con cautela y como matiz.
+
+### Pendiente derivado del cambio
+
+1. **Reescribir ambos artículos** (`articulo_tecnico.md`, `articulo_hypatia.md`) con estos números —
+   los borradores actuales aún hablan de Edomex/125 municipios.
+2. Regenerar PDF técnico + Word Hypatia tras aprobación.
+3. Actualizar las celdas "Lectura del equipo" ya no aplica el ejemplo Chimalhuacán (sustituido por
+   casos de Morelos en Parte 17).
+4. Avisar al equipo del cambio de alcance antes de su revisión.
