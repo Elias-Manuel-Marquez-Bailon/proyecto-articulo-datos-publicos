@@ -11,6 +11,9 @@ __pycache__/
 # Word de Hypatia: se llena con telefonos de los autores, NUNCA subir al repo publico
 entregables/Hypatia_*.docx
 
+# Respaldo local de entregables antiguos (Edomex); fuera del repo para mantener la estructura
+entregables/_version_edomex_antigua/
+
 # Sistema
 Thumbs.db
 .DS_Store
