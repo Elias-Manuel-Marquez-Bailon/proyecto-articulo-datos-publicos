@@ -1,126 +1,37 @@
 ﻿MUN,NOM_MUN,perfil,IM_2020,GM_2020
-1,Acambay de Ruíz Castañeda,bajo,52.7750350397093,Medio
-2,Acolman,alto,58.3893321583535,Muy bajo
-3,Aculco,bajo,52.8398605360553,Medio
-4,Almoloya de Alquisiras,intermedio,54.0692949876164,Medio
-5,Almoloya de Juárez,intermedio,55.0208093575604,Bajo
-6,Almoloya del Río,alto,57.9947011427992,Muy bajo
-7,Amanalco,bajo,53.5385848546041,Medio
-8,Amatepec,intermedio,52.7637158822957,Medio
-9,Amecameca,intermedio,57.8710471579132,Muy bajo
-10,Apaxco,alto,58.0617527169983,Muy bajo
-11,Atenco,intermedio,56.987059155138,Muy bajo
-12,Atizapán,intermedio,57.1814782074509,Muy bajo
-13,Atizapán de Zaragoza,alto,60.0444486219667,Muy bajo
-14,Atlacomulco,intermedio,56.2588100892081,Bajo
-15,Atlautla,intermedio,55.5118857552817,Bajo
-16,Axapusco,intermedio,56.316356242488,Bajo
-17,Ayapango,alto,56.7473588228833,Muy bajo
-18,Calimaya,alto,58.3860933939114,Muy bajo
-19,Capulhuac,alto,58.7882143366636,Muy bajo
-20,Coacalco de Berriozábal,alto,60.9474221057646,Muy bajo
-21,Coatepec Harinas,intermedio,53.8645161498103,Medio
-22,Cocotitlán,alto,57.7209686239134,Muy bajo
-23,Coyotepec,alto,58.455142130742,Muy bajo
-24,Cuautitlán,alto,60.4532758786705,Muy bajo
-25,Chalco,alto,57.8421149495718,Muy bajo
-26,Chapa de Mota,intermedio,54.4480212259194,Medio
-27,Chapultepec,alto,58.6309456024267,Muy bajo
-28,Chiautla,alto,57.6703008675651,Muy bajo
-29,Chicoloapan,alto,58.9428380369801,Muy bajo
-30,Chiconcuac,alto,58.4280052369662,Muy bajo
-31,Chimalhuacán,intermedio,57.8019731893664,Muy bajo
-32,Donato Guerra,bajo,51.3089834194411,Alto
-33,Ecatepec de Morelos,alto,59.5106884993079,Muy bajo
-34,Ecatzingo,intermedio,56.2483861797893,Bajo
-35,Huehuetoca,alto,59.1562287026604,Muy bajo
-36,Hueypoxtla,intermedio,56.8907355104959,Muy bajo
-37,Huixquilucan,alto,59.1984328386694,Muy bajo
-38,Isidro Fabela,intermedio,56.2872796236821,Bajo
-39,Ixtapaluca,alto,58.9256262064893,Muy bajo
-40,Ixtapan de la Sal,intermedio,56.3260722540851,Bajo
-41,Ixtapan del Oro,bajo,52.0516377992046,Alto
-42,Ixtlahuaca,intermedio,55.2078652199439,Bajo
-43,Xalatlaco,intermedio,56.7539379499164,Muy bajo
-44,Jaltenco,alto,59.7375364167683,Muy bajo
-45,Jilotepec,intermedio,55.0822462011482,Bajo
-46,Jilotzingo,intermedio,56.5783783767566,Muy bajo
-47,Jiquipilco,intermedio,54.7573328375386,Bajo
-48,Jocotitlán,intermedio,56.4647966957885,Bajo
-49,Joquicingo,intermedio,55.6149598163669,Bajo
-50,Juchitepec,intermedio,57.0456403746941,Muy bajo
-51,Lerma,alto,59.3077941296522,Muy bajo
-52,Malinalco,intermedio,54.637655843971,Bajo
-53,Melchor Ocampo,alto,58.6452834522869,Muy bajo
-54,Metepec,alto,60.4466812707242,Muy bajo
-55,Mexicaltzingo,alto,58.8696477501044,Muy bajo
-56,Morelos,bajo,51.6659987825431,Alto
-57,Naucalpan de Juárez,alto,59.5112241221154,Muy bajo
-58,Nezahualcóyotl,alto,59.4154480130066,Muy bajo
-59,Nextlalpan,alto,58.3600958496088,Muy bajo
-60,Nicolás Romero,alto,58.6036528944795,Muy bajo
-61,Nopaltepec,alto,56.8356593550787,Muy bajo
-62,Ocoyoacac,alto,58.6971613524029,Muy bajo
-63,Ocuilan,intermedio,54.6187612306828,Bajo
-64,El Oro,intermedio,54.8532153000352,Bajo
-65,Otumba,alto,56.9895755168096,Muy bajo
-66,Otzoloapan,intermedio,54.0222446615773,Medio
-67,Otzolotepec,intermedio,56.7050122684209,Muy bajo
-68,Ozumba,intermedio,56.085230128654,Bajo
-69,Papalotla,alto,57.8103765235517,Muy bajo
-70,La Paz,alto,57.4383444491744,Muy bajo
-71,Polotitlán,intermedio,56.0249551539035,Bajo
-72,Rayón,alto,58.2675633844705,Muy bajo
-73,San Antonio la Isla,alto,59.7193742662461,Muy bajo
-74,San Felipe del Progreso,bajo,52.2588255953042,Alto
-75,San Martín de las Pirámides,alto,57.7114697877946,Muy bajo
-76,San Mateo Atenco,alto,58.9621005848408,Muy bajo
-77,San Simón de Guerrero,intermedio,53.8550805696197,Medio
-78,Santo Tomás,intermedio,54.9656106906239,Bajo
-79,Soyaniquilpan de Juárez,intermedio,55.7048560989425,Bajo
-80,Sultepec,bajo,51.6389489230125,Alto
-81,Tecámac,alto,60.1165617134056,Muy bajo
-82,Tejupilco,intermedio,54.033257350005,Medio
-83,Temamatla,intermedio,56.9616908510154,Muy bajo
-84,Temascalapa,intermedio,56.8659783014653,Muy bajo
-85,Temascalcingo,intermedio,54.6960360215221,Bajo
-86,Temascaltepec,bajo,52.9101554133334,Medio
-87,Temoaya,intermedio,55.6308545631773,Bajo
-88,Tenancingo,intermedio,56.3096708080365,Bajo
-89,Tenango del Aire,alto,57.6397975884192,Muy bajo
-90,Tenango del Valle,intermedio,56.7073643694487,Muy bajo
-91,Teoloyucan,alto,58.8909145602834,Muy bajo
-92,Teotihuacán,alto,58.2626334105002,Muy bajo
-93,Tepetlaoxtoc,alto,57.1654846883447,Muy bajo
-94,Tepetlixpa,intermedio,56.3165283563294,Bajo
-95,Tepotzotlán,alto,58.1570885980362,Muy bajo
-96,Tequixquiac,alto,58.5875685555793,Muy bajo
-97,Texcaltitlán,intermedio,53.5437211461746,Medio
-98,Texcalyacac,alto,58.6034447832486,Muy bajo
-99,Texcoco,alto,57.6734713635661,Muy bajo
-100,Tezoyuca,intermedio,55.8593612094664,Bajo
-101,Tianguistenco,intermedio,57.0256828517235,Muy bajo
-102,Timilpan,intermedio,55.5768463252931,Bajo
-103,Tlalmanalco,alto,59.0269357545096,Muy bajo
-104,Tlalnepantla de Baz,alto,60.0298154572752,Muy bajo
-105,Tlatlaya,intermedio,52.1900800672599,Alto
-106,Toluca,alto,59.2839719834847,Muy bajo
-107,Tonatico,alto,57.0838983356463,Muy bajo
-108,Tultepec,alto,59.7177324368111,Muy bajo
-109,Tultitlán,alto,59.9872455123799,Muy bajo
-110,Valle de Bravo,intermedio,56.8107855470385,Muy bajo
-111,Villa de Allende,bajo,52.5274688610171,Alto
-112,Villa del Carbón,bajo,53.6074728043998,Medio
-113,Villa Guerrero,intermedio,54.2232743522467,Medio
-114,Villa Victoria,bajo,50.4215142696938,Alto
-115,Xonacatlán,alto,58.1416849347648,Muy bajo
-116,Zacazonapan,intermedio,55.5199407529248,Bajo
-117,Zacualpan,bajo,49.69306767009,Alto
-118,Zinacantepec,alto,58.3289806504099,Muy bajo
-119,Zumpahuacán,bajo,52.2106690237787,Alto
-120,Zumpango,alto,58.5428109545988,Muy bajo
-121,Cuautitlán Izcalli,alto,60.6330017215897,Muy bajo
-122,Valle de Chalco Solidaridad,alto,57.842075197698,Muy bajo
-123,Luvianos,bajo,51.4452145772518,Alto
-124,San José del Rincón,bajo,51.3136757810849,Alto
-125,Tonanitla,alto,58.0334425267733,Muy bajo
+1,Amacuzac,bajo,55.5938630597967,Bajo
+2,Atlatlahucan,intermedio,54.9390370623568,Bajo
+3,Axochiapan,bajo,54.3530576543147,Medio
+4,Ayala,bajo,55.5629529988975,Bajo
+5,Coatlán del Río,bajo,55.1114422959897,Bajo
+6,Cuautla,alto,57.9580385580829,Muy bajo
+7,Cuernavaca,alto,59.8665562109064,Muy bajo
+8,Emiliano Zapata,alto,58.7152993650159,Muy bajo
+9,Huitzilac,intermedio,55.9324009093389,Bajo
+10,Jantetelco,intermedio,55.7685412410388,Bajo
+11,Jiutepec,alto,59.2033181473043,Muy bajo
+12,Jojutla,alto,57.6666492097488,Muy bajo
+13,Jonacatepec de Leandro Valle,bajo,56.1381289761248,Bajo
+14,Mazatepec,bajo,55.9424011163551,Bajo
+15,Miacatlán,bajo,56.5617138008141,Muy bajo
+16,Ocuituco,bajo,55.272686546171,Bajo
+17,Puente de Ixtla,bajo,56.7295573982754,Muy bajo
+18,Temixco,alto,57.6801965323474,Muy bajo
+19,Tepalcingo,bajo,55.0676136184833,Bajo
+20,Tepoztlán,intermedio,55.8013241636197,Bajo
+21,Tetecala,bajo,55.9889657770181,Bajo
+22,Tetela del Volcán,bajo,56.417741353284,Bajo
+23,Tlalnepantla,intermedio,52.7432378319901,Medio
+24,Tlaltizapán de Zapata,bajo,56.4150412871134,Bajo
+25,Tlaquiltenango,bajo,56.3191714903408,Bajo
+26,Tlayacapan,intermedio,55.389973766087,Bajo
+27,Totolapan,intermedio,52.9232765906559,Medio
+28,Xochitepec,alto,57.0851818212047,Muy bajo
+29,Yautepec,alto,57.0586872662098,Muy bajo
+30,Yecapixtla,bajo,55.8864974298262,Bajo
+31,Zacatepec,alto,58.8472052044298,Muy bajo
+32,Zacualpan de Amilpas,bajo,57.0924123849299,Muy bajo
+33,Temoac,bajo,55.5609322725122,Bajo
+34,Coatetelco,bajo,53.3693711847824,Medio
+35,Xoxocotla,bajo,54.0726502137528,Medio
+36,Hueyapan,bajo,55.4327259116483,Bajo
