@@ -17,3 +17,6 @@ entregables/_version_edomex_antigua/
 # Sistema
 Thumbs.db
 .DS_Store
+
+# Herramienta interna del agente (registro de skills); nunca subir
+.atl/
