@@ -68,3 +68,4 @@ Nota: por tamaño, el dataset crudo nacional del ITER **no** está incluido en e
 - Artículo técnico: [`articulo_tecnico.md`](articulo_tecnico.md)
 - Versión de divulgación (Revista Hypatia): [`articulo_hypatia.md`](articulo_hypatia.md)
 - PDF: [`entregables/articulo_tecnico.pdf`](entregables/articulo_tecnico.pdf)
+- Publicación en Medium: [Segmentación de los municipios de Morelos según condiciones de vivienda, servicios y conectividad](https://medium.com/@20233tn068/segmentaci%C3%B3n-de-los-municipios-de-morelos-seg%C3%BAn-condiciones-de-vivienda-servicios-y-conectividad-6a80669ecaff)
